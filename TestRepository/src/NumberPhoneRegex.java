@@ -66,7 +66,7 @@ public class NumberPhoneRegex {
     Matcher numberMatcherV2 = digitPattern.matcher(input);
 
     if (numberMatcherV2.matches()) {
-      System.out.printf("Phone number: %s %s %s %s %s\n", numberMatcherV2.group(1),
+      System.out.printf("Phone number: %s %s %s %s %s\n", numberMatcherV2.group(1) != null ? numberMatcherV2.group(1) : "",
           numberMatcherV2.group(2), numberMatcherV2.group(3), numberMatcherV2.group(4),
           numberMatcherV2.group(5));
     }
